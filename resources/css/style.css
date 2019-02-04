@@ -1,0 +1,318 @@
+/* Universal */
+
+html {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.side-text {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  background-color: white;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header img {
+  height: 3rem;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title span {
+  color: grey;
+  padding-left: 0.15rem;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  align-self: center;
+  font-size: 0.85rem;
+  padding-right: 2.5rem;
+}
+
+.desktop {
+  display: inline-block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Main */
+
+main {
+  position: relative;
+  top: 4rem;
+  color: pink;
+}
+
+section:nth-child(2n+1) {
+  background-color: green;
+}
+
+
+/* Banner */
+
+.banner img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: 2rem 2.5rem 2rem 1.5rem;
+  flex-shrink: 0;
+}
+
+.banner h3 {
+  margin: 1.5rem 0;
+}
+
+.banner .side-text {
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.start {
+  width: 75%;
+  background-color: blue;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.start:hover {
+  background-color: red;
+  color: black;
+}
+
+/* Campus */
+
+.multi-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%
+}
+
+.main-pic-box {
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.main-pic-box img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.main-pic-box h2 {
+  padding: 0 0 1.25rem 0;
+}
+
+#mobile-pic {
+  display: none;
+}
+
+.stacked-content-box {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  vertical-align: top;
+  margin-top: 1rem;
+}
+
+.content-box img {
+  display: inline-block;
+  width: 35%;
+  margin: 1.25rem;
+  vertical-align: middle;
+}
+
+.content-box .side-text {
+  width: 60%;
+}
+
+.campus .content-box:last-child {
+  background-color: green;
+}
+
+/* Courses */
+
+.courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.courses h2 {
+  text-align: center;
+}
+
+.course-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.course-box {
+  width: 30%;
+  height: auto;
+  margin: 0 0.5rem 1rem 0.5rem;
+  background-color: yellow;
+}
+
+.course-box img {
+  width: 100%;
+}
+
+.course-text {
+  padding: 0.25rem 0 0 1rem;
+  margin: 0.25rem auto;
+}
+
+/* Thesis */
+
+video {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.thesis .main-pic-box {
+  padding: 1rem 1rem 1.5rem 1.5rem;
+}
+
+.thesis .content-box:first-child {
+  background-color: green;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-top: 1.5px solid black;
+  top: 3rem;
+}
+
+footer h5 {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+footer nav {
+  align-self: center;
+  padding-top: 1.5rem;
+}
+
+footer span {
+  padding-left: 1rem;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 470px) {
+
+/* Hidden */
+
+.logo, .desktop, .course-box img, .course-box p, #pc-pic, .thesis .stacked-content-box, .thesis p, .thesis h3, footer nav {
+    display: none;
+}
+
+
+.mobile {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.mobile img {
+  width: auto;
+  height: 90%;
+}
+
+.banner img {
+  width: 100%;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.banner .side-text {
+  width: 100%;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.start {
+  width: 100%;
+  align-self: center;
+}
+
+.content-box {
+  display: flex;
+  flex-flow: column;
+}
+
+.content-box img {
+  width: 100%;
+  margin: auto;
+}
+
+#mobile-pic {
+  display: block;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.courses {
+  border: 1px solid orange;
+}
+
+.course-container {
+  flex-flow: column;
+}
+
+.course-box {
+  width: 100%;
+  height: auto;
+}
+
+.thesis .main-pic-box {
+  width: 100%;
+}
+
+video {
+  margin: auto;
+}
+
+footer {
+  margin: 1.5rem;
+}
+
+}
